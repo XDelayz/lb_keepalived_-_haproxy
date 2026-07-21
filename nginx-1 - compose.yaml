@@ -1,0 +1,13 @@
+services:
+  podinfo:
+    image: ghcr.io/stefanprodan/podinfo:6.9.3
+    container_name: podinfo
+    hostname: podinfo-1
+
+    restart: unless-stopped
+
+    ports:
+      - "80:9898"
+
+    environment:
+      PODINFO_UI_MESSAGE: "HAProxy Demo - Backend 1"
